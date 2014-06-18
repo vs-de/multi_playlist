@@ -1,4 +1,4 @@
-$(document).ready(function {
+$(document).ready(function() {
   var pl = $('iframe').filter(function(i, e){
     return $(e).attr('src') ? $(e).attr('src').match(/soundcloud/) : false
   });
