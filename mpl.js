@@ -6,7 +6,7 @@ $(document).ready(function() {
     SC.Widget(e).bind(
       SC.Widget.Events.FINISH, 
       function(event, data){
-        SC.Widget(my_arr[(i+1) % pl.size()]).play();
+        SC.Widget(pl[(i+1) % pl.size()]).play();
       })
   });
 });
