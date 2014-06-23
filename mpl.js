@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var pl = $('iframe').filter(function(i, e){
-    return $(e).attr('src') ? $(e).attr('src').match(/soundcloud/) : false
+    return $(e).attr('src') ? $(e).attr('src').match(/soundcloud/) : false;
   });
   pl.each(function(i,e){
     SC.Widget(e).bind(
