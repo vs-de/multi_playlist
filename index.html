@@ -10,8 +10,19 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <script language="javascript" type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
-<script language="javascript" type="text/javascript" src="https://www.youtube.com/iframe_api"></script><
+<script language="javascript" type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 <script language="javascript" type="text/javascript" src="http://vs-de.github.io/multi_playlist/mpl.js"></script>
+
+<style type="text/css"> 
+  li {
+    list-style: none; 
+    margin: 40px;
+    padding: 10px;
+    border: solid 1px #555;
+    background-color: #bbb;
+    text-align: center;
+  }
+</style>
 
 <!-- original google version from doc -->
 <!--
@@ -21,19 +32,20 @@
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 </script>
-<!-- -->
+-->
 </head>
-
 <body>
-<h2>multi-source sound-loop demo</h2>
+<h2> multi-source sound-loop demo </h2>
 <br/>
-when one track stops, the next should start
+when one track stops, the next should start.
+Currently supports mixing of soundcloud-tracks and youtube-videos. Maybe other sources will follow.
+Also have a look at the <a href="https://github.com/vs-de/multi_playlist">github-page</a>.
 
 <ul>
   <li style="width: 500px;">
     <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97478108&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
   </li>
-  <li>
+  <li style="width: 570px;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/X02F3YiGIgM?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
   </li>
   <li style="width: 500px;">
