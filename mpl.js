@@ -53,18 +53,18 @@ $(document).ready(function() {
   MPL.pl.each(function(i,e){
     _w_attach(e.type, i, e.object);
   });
+  function onYouTubeIframeAPIReady() {
+    MPL.pl.each(function(i,p){
+      if (p.type == 'yt') {
+        p.object = new YT.Player($(p.object).attr('id'), {events: {
+          onStateChange: function (ev) {
+            if (ev.data == YT.PlayerState.ENDED) {
+              MPL.pl[(i+1) % MPL.pl.size()].play();
+            }
+          }
+        }});
+      }
+    });
+  }
 });
 
-function onYouTubeIframeAPIReady() {
-  MPL.pl.each(function(i,p){
-    if (p.type == 'yt') {
-      p.object = new YT.Player($(p.object).attr('id'), {events: {
-        onStateChange: function (ev) {
-          if (ev.data == YT.PlayerState.ENDED) {
-            MPL.pl[(i+1) % MPL.pl.size()].play();
-          }
-        }
-      }});
-    }
-  });
-}
