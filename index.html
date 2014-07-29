@@ -10,18 +10,31 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <script language="javascript" type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
+<script language="javascript" type="text/javascript" src="https://www.youtube.com/iframe_api"></script><
 <script language="javascript" type="text/javascript" src="http://vs-de.github.io/multi_playlist/mpl.js"></script>
 
+<!-- original google version from doc -->
+<!--
+<script language="javascript" type="text/javascript">
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+<!-- -->
 </head>
 
 <body>
-<h2>testing soundcloud loop.</h2>
+<h2>multi-source sound-loop demo</h2>
 <br/>
 when one track stops, the next should start
 
 <ul>
   <li style="width: 500px;">
     <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97478108&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+  </li>
+  <li>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/X02F3YiGIgM?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
   </li>
   <li style="width: 500px;">
     <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155412900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
